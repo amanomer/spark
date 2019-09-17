@@ -196,9 +196,6 @@ $(document).ready(function() {
           conf.columns = removeColumnByName(conf.columns, durationColumnName);
         }
         conf.order = [[ getColumnIndex(conf.columns, defaultSortColumn), "desc" ]];
-        conf.columnDefs = [
-          {"searchable": false, "targets": [getColumnIndex(conf.columns, durationColumnName)]}
-        ];
         historySummary.append(apps);
         apps.DataTable(conf);
         sibling.after(historySummary);
